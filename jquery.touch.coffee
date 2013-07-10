@@ -1,7 +1,7 @@
 (($, document, window) ->
 
     $['fn']['touchsupport'] = -> 
-        !!('ontouchstart' of window) or !!window.navigator.msPointerEnabled
+        !!('ontouchstart' of window) or (window.DocumentTouch and document instanceof DocumentTouch) or window.Touch or !!window.navigator.msPointerEnabled
     events = ['swipe', 'swipeLeft', 'swipeRight', 'swipeUp', 'swipeDown', 'doubleTap', 'tap', 'singleTap', 'longTap']
     touch = {}
     touchTimeout = tapTimeout = swipeTimeout = longTapTimeout = null

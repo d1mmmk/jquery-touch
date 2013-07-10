@@ -2,7 +2,7 @@
   (function($, document, window) {
     var cancelLongTap, cancelTouch, events, longTap, longTapDelay, longTapTimeout, swipeDirection, swipeTimeout, tapTimeout, touch, touchEvent, touchTimeout;
     $['fn']['touchsupport'] = function() {
-      return !!('ontouchstart' in window) || !!window.navigator.msPointerEnabled;
+      return !!('ontouchstart' in window) || (window.DocumentTouch && document instanceof DocumentTouch) || window.Touch || !!window.navigator.msPointerEnabled;
     };
     events = ['swipe', 'swipeLeft', 'swipeRight', 'swipeUp', 'swipeDown', 'doubleTap', 'tap', 'singleTap', 'longTap'];
     touch = {};
