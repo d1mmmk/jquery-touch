@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div class="touch" style="border: 1px solid green; float: left;width: 100px;height: 100px; line-height: 100px; text-align: center;">
+            tap me!
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="jquery.touch.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($){
+                $('.touch').on("tap", function(){
+                    $(this).text("tap");
+                })
+                $('.touch').on("singleTap", function(){
+                    $(this).text("singleTap");
+                })
+                $('.touch').on("doubleTap", function(){
+                    $(this).text("doubleTap");
+                })
+                $('.touch').on("longTap", function(){
+                    $(this).text("longTap");
+                })
+                $('.touch').on("swipe", function(){
+                    $(this).text("swipe");
+                })
+                $('.touch').on("swipeLeft", function(){
+                    $(this).text("swipeLeft");
+                })
+                $('.touch').on("swipeRight", function(){
+                    $(this).text("swipeRight");
+                })
+                $('.touch').on("swipeUp", function(){
+                    $(this).text("swipeUp");
+                })
+                $('.touch').on("swipeDown",function(){
+                    $(this).text("swipeDown");
+                })
+            })
+        </script>
+    </body>
+</html>
